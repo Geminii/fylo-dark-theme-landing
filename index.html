@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Fylo dark theme landing page challenge on Frontend Mentor" />
     <title>Fylo Dark Theme Landing</title>
+    <style type="text/css">
+      .test::after {
+        @apply absolute bottom-0 left-0 w-full z-10;
+        content: '';
+      }
+    </style>
   </head>
   <body>
     <main class="min-h-screen">
@@ -31,29 +37,37 @@
         </div>
       </header>
 
-      <section class="bg-dark-blue pb-8 px-4">
+      <section class="relative bg-dark-blue pb-8 px-4 overflow-hidden min-h-[690px] lg:min-h-[890px]">
         <img 
-          src="./assets/illustrations/illustration-intro.png" 
-          alt="Illu into"
-          class="pt-4 mx-auto"
+          src="./assets/icons/bg-curvy-desktop.svg" 
+          alt="Curvy wave"
+          class="absolute bottom-0 left-0 w-full z-10"
         />
 
-        <div class="text-center">
-          <h1 class="font-raleway font-bold mt-9 text-white text-3xl leading-[3rem] lg:max-w-2xl mx-auto">
-            All your files in one secure location, accessible anywhere.
-          </h1>
-    
-          <p class="mt-5 text-gray md:max-w-md mx-auto px-4">
-            Fylo stores all your most important files in one secure location. Access them wherever 
-            you need, share and collaborate with friends family, and co-workers.
-          </p>
-    
-          <a 
-            href="#" 
-            class="inline-block text-white font-bold text-center rounded-full px-14 py-4 mt-7 bg-gradient-to-r from-cyan to-blue hover:to-cyan"
-          >
-            Get Started
-          </a>
+        <div class="absolute md:left-1/4 md:right-1/4 z-20">
+          <img 
+            src="./assets/illustrations/illustration-intro.png" 
+            alt="Illu into"
+            class="pt-4 px-4 mx-auto z-0"
+          />
+
+          <div class="text-center z-10">
+            <h1 class="font-raleway font-bold mt-9 text-white text-3xl leading-[3rem] lg:max-w-2xl mx-auto">
+              All your files in one secure location, accessible anywhere.
+            </h1>
+      
+            <p class="mt-5 text-gray md:max-w-md mx-auto px-4">
+              Fylo stores all your most important files in one secure location. Access them wherever 
+              you need, share and collaborate with friends family, and co-workers.
+            </p>
+      
+            <a 
+              href="#" 
+              class="inline-block text-white font-bold text-center rounded-full px-14 py-4 mt-7 bg-gradient-to-r from-cyan to-blue hover:to-cyan"
+            >
+              Get Started
+            </a>
+          </div>
         </div>
       </section>
 
@@ -151,13 +165,15 @@
           </div>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-36 px-6 pb-72">
-          <div class="relative bg-dark-blue-testimonials px-5 py-6 rounded-md drop-shadow-lg">
-            <img 
-              src="./assets/icons/bg-quotes.png" 
-              alt="Quote" 
-              class="absolute -top-4 lg:-top-9 left-2 lg:-left-2 h-4 lg:h-12"
-            />
+        <div class="relative grid grid-cols-1 lg:grid-cols-3 gap-6 mt-36 px-6 pb-72">
+          <img 
+            src="./assets/icons/bg-quotes.png" 
+            alt="Quote" 
+            class="absolute -top-4 lg:-top-9 left-8 lg:left-4 h-4 lg:h-12"
+          />
+          
+          <div class="bg-dark-blue-testimonials px-5 py-6 rounded-md drop-shadow-lg">
+            
             <p class="text-gray leading-6 z-10">
               Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has  become a well-oiled collaboration machine.
             </p>
