@@ -10,6 +10,7 @@ module.exports = {
       'dark-blue-testimonials': 'var(--dark-blue-testimonials)',
       'cyan': 'var(--cyan)',
       'blue': 'var(--blue)',
+      'gray': 'var(--gray)',
       'light-red': 'var(--light-red)',
       'white': 'var(--white)',
     },
